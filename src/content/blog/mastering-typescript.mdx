@@ -1,0 +1,55 @@
+---
+title: "Mastering TypeScript: Advanced Patterns for React Developers"
+date: "2026-06-25"
+description: "Deep dive into advanced TypeScript patterns including discriminated unions, template literal types, and utility types that will elevate your React codebase."
+category: "TypeScript"
+coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop"
+readingTime: "12 min read"
+---
+
+# Mastering TypeScript: Advanced Patterns for React Developers
+
+TypeScript is no longer optional for serious React development. Once you go beyond the basics, you'll find a rich type system that can eliminate entire categories of bugs at compile time.
+
+## Discriminated Unions
+
+One of the most powerful TypeScript patterns is the **discriminated union**, which allows you to model state machines elegantly:
+
+```typescript
+type AsyncState<T> =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "success"; data: T }
+  | { status: "error"; error: string };
+
+function DataComponent<T>({ state }: { state: AsyncState<T> }) {
+  if (state.status === "loading") return <Spinner />;
+  if (state.status === "error") return <Error message={state.error} />;
+  if (state.status === "success") return <Data value={state.data} />;
+  return null;
+}
+```
+
+## Template Literal Types
+
+Template literal types allow you to create precise string types based on combinations:
+
+```typescript
+type EventName = `on${Capitalize<string>}`;
+type CSSUnit = `${number}px` | `${number}rem` | `${number}%`;
+```
+
+## Generic Constraints
+
+```typescript
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const user = { name: "Amarjeet", age: 25 };
+const name = getProperty(user, "name"); // TypeScript knows this is string
+```
+
+## Conclusion
+
+Investing time in mastering TypeScript pays dividends. Your IDE becomes smarter, your refactors become safer, and your codebase becomes self-documenting. Start with these patterns and your React code will never be the same.
