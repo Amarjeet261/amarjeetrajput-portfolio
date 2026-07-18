@@ -6,6 +6,8 @@ export const projectsData = [
     thumbnail: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
     category: "Full Stack",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "Stripe"],
+    techIcons: ["SiNextdotjs", "SiTypescript", "SiTailwindcss", "SiPrisma", "SiPostgresql", "SiStripe"],
+    status: "Completed",
     featured: true,
     githubUrl: "https://github.com",
     liveUrl: "https://example.com"
@@ -17,6 +19,8 @@ export const projectsData = [
     thumbnail: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=1000&auto=format&fit=crop",
     category: "AI & SaaS",
     technologies: ["React", "Vite", "Zustand", "OpenAI API", "Tailwind CSS"],
+    techIcons: ["SiReact", "SiVite", "SiReact", "SiOpenai", "SiTailwindcss"],
+    status: "Completed",
     featured: true,
     githubUrl: "https://github.com",
     liveUrl: "https://example.com"
@@ -28,6 +32,8 @@ export const projectsData = [
     thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
     category: "Full Stack",
     technologies: ["Node.js", "Socket.io", "Express", "React", "MongoDB"],
+    techIcons: ["SiNodedotjs", "SiSocketdotio", "SiExpress", "SiReact", "SiMongodb"],
+    status: "Completed",
     featured: false,
     githubUrl: "https://github.com",
     liveUrl: "https://example.com"
@@ -39,6 +45,8 @@ export const projectsData = [
     thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
     category: "Frontend",
     technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
+    techIcons: ["SiNextdotjs", "SiFramer", "SiTailwindcss"],
+    status: "Completed",
     featured: false,
     githubUrl: "https://github.com",
     liveUrl: "https://example.com"

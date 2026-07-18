@@ -1,76 +1,86 @@
 export const skillsData = [
   {
-    category: "Programming Languages",
+    category: "Languages",
+    cardClass: "skill-card-languages",
+    titleColor: "#f97316",
     skills: [
       { name: "JavaScript", icon: "SiJavascript" },
       { name: "TypeScript", icon: "SiTypescript" },
-      { name: "C", icon: "SiC" },
+      { name: "Python", icon: "SiPython" },
       { name: "C++", icon: "SiCplusplus" },
-      { name: "SQL", icon: "SiPostgresql" }
+      { name: "SQL", icon: "SiPostgresql" },
+      { name: "HTML5", icon: "SiHtml5" },
+      { name: "CSS3", icon: "SiCss3" },
+      { name: "PHP", icon: "SiPhp" }
     ]
   },
   {
     category: "Frontend",
+    cardClass: "skill-card-frontend",
+    titleColor: "#ec4899",
     skills: [
-      { name: "HTML", icon: "SiHtml5" },
-      { name: "CSS", icon: "SiCss3" },
-      { name: "Tailwind CSS", icon: "SiTailwindcss" },
-      { name: "React", icon: "SiReact" },
+      { name: "React.js", icon: "SiReact" },
       { name: "Next.js", icon: "SiNextdotjs" },
       { name: "Redux", icon: "SiRedux" },
-      { name: "Zustand", icon: "SiReact" },
-      { name: "shadcn/ui", icon: "SiShadcnui" },
-      { name: "Material UI", icon: "SiMui" }
+      { name: "Tailwind CSS", icon: "SiTailwindcss" },
+      { name: "Material-UI", icon: "SiMui" },
+      { name: "Shadcn", icon: "SiShadcnui" },
+      { name: "Framer Motion", icon: "SiFramer" },
+      { name: "Zustand", icon: "SiReact" }
     ]
   },
   {
-    category: "Backend",
+    category: "Backend & APIs",
+    cardClass: "skill-card-backend",
+    titleColor: "#22c55e",
     skills: [
       { name: "Node.js", icon: "SiNodedotjs" },
       { name: "Express.js", icon: "SiExpress" },
-      { name: "NestJS", icon: "SiNestjs" },
+      { name: "GraphQL", icon: "SiGraphql" },
       { name: "REST APIs", icon: "SiFastapi" },
-      { name: "JWT", icon: "SiJsonwebtokens" },
-      { name: "OAuth", icon: "SiAuth0" },
-      { name: "WebSockets", icon: "SiSocketdotio" }
+      { name: "WebSockets", icon: "SiSocketdotio" },
+      { name: "EJS", icon: "SiEjs" },
+      { name: "Postman", icon: "SiPostman" }
     ]
   },
   {
-    category: "Database",
+    category: "Databases",
+    cardClass: "skill-card-database",
+    titleColor: "#eab308",
     skills: [
-      { name: "PostgreSQL", icon: "SiPostgresql" },
-      { name: "MySQL", icon: "SiMysql" },
       { name: "MongoDB", icon: "SiMongodb" },
+      { name: "MySQL", icon: "SiMysql" },
+      { name: "PostgreSQL", icon: "SiPostgresql" },
       { name: "Prisma ORM", icon: "SiPrisma" },
       { name: "Redis", icon: "SiRedis" }
     ]
   },
   {
     category: "DevOps & Tools",
+    cardClass: "skill-card-devops",
+    titleColor: "#8b5cf6",
     skills: [
-      { name: "Git", icon: "SiGit" },
-      { name: "GitHub", icon: "SiGithub" },
+      { name: "Git/GitHub", icon: "SiGit" },
+      { name: "CI/CD", icon: "SiGithubactions" },
+      { name: "Auth0", icon: "SiAuth0" },
+      { name: "AWS (Basics)", icon: "SiAmazonwebservices" },
       { name: "Docker", icon: "SiDocker" },
-      { name: "Postman", icon: "SiPostman" },
       { name: "Linux", icon: "SiLinux" },
-      { name: "VS Code", icon: "SiVisualstudiocode" },
-      { name: "Vercel", icon: "SiVercel" },
-      { name: "Render", icon: "SiRender" },
-      { name: "Cloudflare", icon: "SiCloudflare" }
+      { name: "Vercel", icon: "SiVercel" }
     ]
   },
   {
     category: "AI & Integrations",
+    cardClass: "skill-card-ai",
+    titleColor: "#14b8a6",
     skills: [
-      { name: "OpenAI API", icon: "SiOpenai" },
       { name: "Gemini API", icon: "SiGoogle" },
+      { name: "Lang Chain", icon: "SiLangchain" },
+      { name: "Generative AI", icon: "SiOpenai" },
       { name: "Razorpay", icon: "SiRazorpay" },
       { name: "Stripe", icon: "SiStripe" },
       { name: "Firebase", icon: "SiFirebase" },
-      { name: "Supabase", icon: "SiSupabase" },
-      { name: "Clerk", icon: "SiClerk" },
-      { name: "Cloudinary", icon: "SiCloudinary" },
-      { name: "AWS S3", icon: "SiAmazonwebservices" }
+      { name: "Cloudinary", icon: "SiCloudinary" }
     ]
   }
 ];

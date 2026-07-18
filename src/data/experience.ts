@@ -4,6 +4,9 @@ export const experienceData = [
     company: "TechNova Solutions",
     role: "Senior Full Stack Developer",
     duration: "Jan 2024 - Present",
+    durationShort: "1 yr 6 mos",
+    location: "San Francisco, USA",
+    verifyUrl: "https://linkedin.com",
     description: [
       "Architected and developed a scalable microservices backend using Node.js, NestJS, and PostgreSQL.",
       "Improved application performance by 40% through Redis caching and optimized database indexing.",
@@ -16,6 +19,9 @@ export const experienceData = [
     company: "WebFlow Agency",
     role: "Frontend Developer",
     duration: "Mar 2022 - Dec 2023",
+    durationShort: "1 yr 10 mos",
+    location: "Remote, India",
+    verifyUrl: "https://linkedin.com",
     description: [
       "Built highly interactive user interfaces using React and Tailwind CSS for 10+ enterprise clients.",
       "Implemented complex state management using Redux Toolkit and React Query.",
@@ -28,6 +34,9 @@ export const experienceData = [
     company: "StartUp Inc.",
     role: "Software Engineering Intern",
     duration: "Jun 2021 - Feb 2022",
+    durationShort: "9 mos",
+    location: "Delhi, India",
+    verifyUrl: "https://linkedin.com",
     description: [
       "Developed RESTful APIs using Express.js and MongoDB.",
       "Integrated third-party APIs including Stripe and SendGrid for payment processing and email notifications.",

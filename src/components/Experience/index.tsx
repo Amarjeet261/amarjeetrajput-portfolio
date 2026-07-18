@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { experienceData } from "@/data/experience";
-import { Briefcase, Calendar } from "lucide-react";
+import { ExternalLink, MapPin, Briefcase } from "lucide-react";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 relative bg-black/5 dark:bg-white/5">
+    <section id="experience" className="py-24 relative bg-blue-50/80 dark:bg-blue-950/20">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,75 +15,94 @@ export function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-4">
-            Professional <span className="text-gradient">Experience</span>
+            Experience
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            My journey in the tech industry, the roles I've held, and the impact I've made.
+            A timeline of my professional journey and key achievements
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto relative">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
+        <div className="max-w-4xl mx-auto space-y-6">
+          {experienceData.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-card rounded-2xl border border-border/50 shadow-md overflow-hidden"
+            >
+              {/* Company Header */}
+              <div className="flex items-center justify-between px-6 pt-5 pb-2">
+                <h3 className="text-lg font-bold font-outfit text-foreground">
+                  {exp.company}
+                </h3>
+                {exp.verifyUrl && (
+                  <a
+                    href={exp.verifyUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors uppercase tracking-wide"
+                  >
+                    Verify <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
 
-          <div className="space-y-12">
-            {experienceData.map((exp, index) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Timeline Dot */}
-                <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 w-10 h-10 rounded-full bg-background border-4 border-primary items-center justify-center z-10 shadow-[0_0_15px_rgba(var(--primary),0.5)]">
-                  <Briefcase size={16} className="text-primary" />
-                </div>
+              {/* Role Row */}
+              <div className="px-6 pb-5">
+                <div className="flex items-center gap-4 bg-muted/40 dark:bg-muted/20 rounded-xl p-4">
+                  {/* Company Logo Placeholder */}
+                  <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center shrink-0 text-primary font-bold text-sm">
+                    <Briefcase size={20} />
+                  </div>
 
-                {/* Content Card */}
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pl-12" : "md:pr-12"}`}>
-                  <div className="glass-card p-6 md:p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
-                      <h3 className="text-2xl font-bold text-foreground font-outfit">
-                        {exp.role}
-                      </h3>
-                      <div className="flex items-center gap-2 text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full w-fit">
-                        <Calendar size={14} />
-                        <span>{exp.duration}</span>
-                      </div>
-                    </div>
-                    
-                    <h4 className="text-lg font-semibold text-muted-foreground mb-6">
-                      {exp.company}
+                  {/* Role Info */}
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-foreground text-base truncate">
+                      {exp.role}
                     </h4>
+                    <div className="flex items-center gap-1.5 text-sm text-muted-foreground mt-0.5">
+                      <MapPin size={13} />
+                      <span>{exp.location}</span>
+                    </div>
+                  </div>
 
-                    <ul className="space-y-3 mb-6">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="flex gap-3 text-sm text-muted-foreground">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2 pt-4 border-t border-border/50">
-                      {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  {/* Duration */}
+                  <div className="text-right shrink-0 hidden sm:block">
+                    <div className="text-sm font-medium text-foreground">
+                      {exp.duration}
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-0.5">
+                      ({exp.durationShort})
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+
+                {/* Description bullets */}
+                <ul className="mt-4 space-y-2 px-1">
+                  {exp.description.map((item, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-muted-foreground">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border/30">
+                  {exp.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
