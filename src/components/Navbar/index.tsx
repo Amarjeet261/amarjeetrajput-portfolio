@@ -63,7 +63,7 @@ export function Navbar() {
           
           <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
             <ThemeToggle />
-            <a href="/Resume.pdf" target="_blank" rel="noreferrer" download>
+            <a href="/amarjeet-rajput-cv.pdf" target="_blank" rel="noreferrer" download>
               <Button className="rounded-full gap-2 font-medium">
                 <Download size={16} />
                 Resume
@@ -106,7 +106,7 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="px-4 py-2">
-                <a href="/Resume.pdf" target="_blank" rel="noreferrer" download>
+                <a href="/amarjeet-rajput-cv.pdf" target="_blank" rel="noreferrer" download>
                   <Button className="w-full rounded-full gap-2 justify-center">
                     <Download size={16} />
                     Download Resume

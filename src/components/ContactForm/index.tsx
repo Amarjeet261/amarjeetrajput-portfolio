@@ -147,7 +147,7 @@ export function ContactForm() {
                   >
                     <FaLinkedin size={20} />
                   </a>
-                  <a href="/Resume.pdf" target="_blank" rel="noreferrer" download >
+                  <a href="/amarjeet-rajput-cv.pdf" target="_blank" rel="noreferrer" download >
                     <Button className="rounded-full gap-2 font-medium">
                       <Download size={16} />
                       Resume
