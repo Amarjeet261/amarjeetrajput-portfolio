@@ -9,14 +9,9 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Certificates", href: "#certificates" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact Us", href: "#contact" },
 ];
 
 export function Navbar() {

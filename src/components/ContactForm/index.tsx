@@ -93,7 +93,7 @@ export function ContactForm() {
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
                       <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                        contact@example.com
+                        amarjeetrajput326@gmail.com
                       </a>
                     </div>
                   </div>
@@ -104,7 +104,7 @@ export function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">+91 8586816393</p>
                     </div>
                   </div>
 
@@ -114,7 +114,7 @@ export function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Location</h4>
-                      <p className="text-muted-foreground">San Francisco, CA (Remote)</p>
+                      <p className="text-muted-foreground">New Delhi</p>
                     </div>
                   </div>
                 </div>

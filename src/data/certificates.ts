@@ -1,26 +1,50 @@
 export const certificatesData = [
-  {
-    id: "aws-saa",
-    title: "AWS Certified Solutions Architect – Associate",
-    organization: "Amazon Web Services",
-    date: "August 2023",
-    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=800&auto=format&fit=crop",
-    verifyUrl: "https://aws.amazon.com/verification"
+    {
+    id: "jtti-adca",
+    title: "Advanced Diploma in Computer Applications (ADCA)",
+    organization: "JTTI",
+    date: "2023",
+    image: "/certificates",
+    verifyUrl: "#"
   },
   {
-    id: "meta-frontend",
-    title: "Meta Front-End Developer Professional Certificate",
-    organization: "Coursera & Meta",
-    date: "April 2023",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
-    verifyUrl: "https://coursera.org/verify/123"
+    id: "skillsyard-web-development",
+    title: "Advanced Certification in Web Development",
+    organization: "SkillsYard",
+    date: "2024",
+    image: "/certificates/webdevelopemnt.png",
+    verifyUrl: "#"
   },
   {
-    id: "google-ux",
-    title: "Google UX Design Professional Certificate",
-    organization: "Coursera & Google",
-    date: "January 2023",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop",
-    verifyUrl: "https://coursera.org/verify/456"
+    id: "simplilearn-generative-ai",
+    title: "Introduction to Generative AI Studio",
+    organization: "Simplilearn",
+    date: "2024",
+    image: "/certificates/skillup-google-generative-ai.png",
+    verifyUrl: "#"
+  },
+  {
+    id: "deloitte-data-analytics",
+    title: "Data Analytics Job Simulation Certificate",
+    organization: "Deloitte (Forage)",
+    date: "2024",
+    image: "/certificates/deloitte-data-analytics.png",
+    verifyUrl: "#"
+  },
+  {
+    id: "skyscanner-frontend",
+    title: "Front-End Software Engineering Job Simulation",
+    organization: "Skyscanner (Forage)",
+    date: "2024",
+    image: "/certificates/sky-scanner-frontend.png",
+    verifyUrl: "#"
+  },
+  {
+    id: "internship-completion",
+    title: "Internship Completion Certificate",
+    organization: "Internship Program",
+    date: "2024",
+    image: "/certificates/skillsyard-internship.png",
+    verifyUrl: "#"
   }
 ];

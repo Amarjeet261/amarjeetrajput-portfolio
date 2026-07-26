@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "A highly interactive, beautiful, and modern portfolio showcasing my full stack development skills.",
 };
 
+import { ChatWidget } from "@/components/ChatWidget";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>
