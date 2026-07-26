@@ -21,7 +21,9 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const {
     register,
@@ -70,7 +72,8 @@ export function ContactForm() {
             Get In <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss opportunities? I'd love to
+            hear from you.
           </p>
         </motion.div>
 
@@ -84,7 +87,9 @@ export function ContactForm() {
           >
             <div className="glass-card p-8 rounded-2xl h-full flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-bold font-outfit mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-bold font-outfit mb-6">
+                  Contact Information
+                </h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
@@ -92,12 +97,15 @@ export function ContactForm() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
-                      <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      <a
+                        href="mailto:amarjeetrajput326@gmail.com"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
                         amarjeetrajput326@gmail.com
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
                       <Phone size={24} />
@@ -123,15 +131,28 @@ export function ContactForm() {
               <div className="pt-8 mt-8 border-t border-border/50">
                 <h4 className="font-semibold mb-4">Follow Me</h4>
                 <div className="flex gap-4">
-                  <a href="#" className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors">
-                  <SiGithub size={20} />
+                  <a
+                    href="https://github.com/Amarjeet261"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <SiGithub size={20} />
                   </a>
-                  <a href="#" className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors">
-                  <FaLinkedin size={20} />
+                  <a
+                    href="https://www.linkedin.com/in/amarjeetrajput261"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <FaLinkedin size={20} />
                   </a>
-                  <Button variant="outline" className="ml-auto rounded-full gap-2">
-                    <Download size={16} /> Resume
-                  </Button>
+                  <a href="/Resume.pdf" target="_blank" rel="noreferrer" download >
+                    <Button className="rounded-full gap-2 font-medium">
+                      <Download size={16} />
+                      Resume
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -143,10 +164,15 @@ export function ContactForm() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit(onSubmit)} className="glass-card p-8 rounded-2xl space-y-6">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="glass-card p-8 rounded-2xl space-y-6"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">Full Name</label>
+                  <label htmlFor="name" className="text-sm font-medium">
+                    Full Name
+                  </label>
                   <input
                     {...register("name")}
                     id="name"
@@ -154,11 +180,17 @@ export function ContactForm() {
                     className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                     placeholder="John Doe"
                   />
-                  {errors.name && <p className="text-red-500 text-xs">{errors.name.message}</p>}
+                  {errors.name && (
+                    <p className="text-red-500 text-xs">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
-                
+
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">Email Address</label>
+                  <label htmlFor="email" className="text-sm font-medium">
+                    Email Address
+                  </label>
                   <input
                     {...register("email")}
                     id="email"
@@ -166,12 +198,18 @@ export function ContactForm() {
                     className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                     placeholder="john@example.com"
                   />
-                  {errors.email && <p className="text-red-500 text-xs">{errors.email.message}</p>}
+                  {errors.email && (
+                    <p className="text-red-500 text-xs">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium">Subject</label>
+                <label htmlFor="subject" className="text-sm font-medium">
+                  Subject
+                </label>
                 <input
                   {...register("subject")}
                   id="subject"
@@ -179,11 +217,17 @@ export function ContactForm() {
                   className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors"
                   placeholder="Project Inquiry"
                 />
-                {errors.subject && <p className="text-red-500 text-xs">{errors.subject.message}</p>}
+                {errors.subject && (
+                  <p className="text-red-500 text-xs">
+                    {errors.subject.message}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">Message</label>
+                <label htmlFor="message" className="text-sm font-medium">
+                  Message
+                </label>
                 <textarea
                   {...register("message")}
                   id="message"
@@ -191,7 +235,11 @@ export function ContactForm() {
                   className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
-                {errors.message && <p className="text-red-500 text-xs">{errors.message.message}</p>}
+                {errors.message && (
+                  <p className="text-red-500 text-xs">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
               <Button
@@ -204,10 +252,14 @@ export function ContactForm() {
               </Button>
 
               {submitStatus === "success" && (
-                <p className="text-green-500 text-center text-sm font-medium">Message sent successfully!</p>
+                <p className="text-green-500 text-center text-sm font-medium">
+                  Message sent successfully!
+                </p>
               )}
               {submitStatus === "error" && (
-                <p className="text-red-500 text-center text-sm font-medium">Something went wrong. Please try again.</p>
+                <p className="text-red-500 text-center text-sm font-medium">
+                  Something went wrong. Please try again.
+                </p>
               )}
             </form>
           </motion.div>

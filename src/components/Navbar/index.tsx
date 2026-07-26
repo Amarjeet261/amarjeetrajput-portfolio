@@ -9,9 +9,10 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { name: "Projects", href: "#projects" },
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Contact Us", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -62,10 +63,12 @@ export function Navbar() {
           
           <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
             <ThemeToggle />
-            <Button className="rounded-full gap-2 font-medium">
-              <Download size={16} />
-              Resume
-            </Button>
+            <a href="/Resume.pdf" target="_blank" rel="noreferrer" download>
+              <Button className="rounded-full gap-2 font-medium">
+                <Download size={16} />
+                Resume
+              </Button>
+            </a>
           </div>
         </nav>
 
@@ -103,10 +106,12 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="px-4 py-2">
-                <Button className="w-full rounded-full gap-2 justify-center">
-                  <Download size={16} />
-                  Download Resume
-                </Button>
+                <a href="/Resume.pdf" target="_blank" rel="noreferrer" download>
+                  <Button className="w-full rounded-full gap-2 justify-center">
+                    <Download size={16} />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
             </nav>
           </motion.div>

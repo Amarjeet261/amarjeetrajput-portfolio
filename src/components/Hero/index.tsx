@@ -20,14 +20,25 @@ function RotatingStars() {
   });
   return (
     <group ref={ref}>
-      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+      <Stars
+        radius={100}
+        depth={50}
+        count={5000}
+        factor={4}
+        saturation={0}
+        fade
+        speed={1}
+      />
     </group>
   );
 }
 
 export function Hero() {
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden" id="home">
+    <section
+      className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden"
+      id="home"
+    >
       {/* 3D Background */}
       <div className="absolute inset-0 z-0 bg-background/90 dark:bg-background/40">
         <Canvas camera={{ position: [0, 0, 1] }}>
@@ -44,7 +55,7 @@ export function Hero() {
           className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/20 overflow-hidden mb-8 shadow-2xl"
         >
           {/* Placeholder for Profile Image */}
-          <div className="w-full h-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center text-4xl font-bold text-white">
+          <div className="w-full h-full bg-linear-to-br from-primary to-purple-500 flex items-center justify-center text-4xl font-bold text-white">
             AR
           </div>
         </motion.div>
@@ -71,10 +82,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="max-w-[600px] text-muted-foreground mb-8 text-sm md:text-base"
+          className="max-w-150 text-muted-foreground mb-8 text-sm md:text-base"
         >
-          I build high-performance, scalable, and visually stunning web applications. 
-          Specializing in React, Next.js, and modern backend architectures.
+          I build high-performance, scalable, and visually stunning web
+          applications. Specializing in React, Next.js, and modern backend
+          architectures.
         </motion.p>
 
         <motion.div
@@ -83,12 +95,17 @@ export function Hero() {
           transition={{ delay: 0.5 }}
           className="flex flex-wrap items-center justify-center gap-4 mb-10"
         >
-          <Button size="lg" className="rounded-full gap-2">
-            Hire Me <ArrowRight size={18} />
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-full gap-2 glass">
-            <Download size={18} /> Resume
-          </Button>
+          <a href="/#contact" className="inline-block">
+            <Button size="lg" className="rounded-full gap-2">
+              Hire Me <ArrowRight size={18} />
+            </Button>
+          </a>
+          <a href="/Resume.pdf" target="_blank" rel="noreferrer" download>
+            <Button className="rounded-full gap-2 font-medium">
+              <Download size={16} />
+              Resume
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -97,20 +114,33 @@ export function Hero() {
           transition={{ delay: 0.7 }}
           className="flex items-center gap-6"
         >
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a
+            href="https://github.com/Amarjeet261"
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
             <SiGithub size={24} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a
+            href="https://www.linkedin.com/in/amarjeetrajput261"
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
             <FaLinkedin size={24} />
           </a>
-          <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <a
+            href="mailto:amarjeetrajput326@gmail.com"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
             <Mail size={24} />
           </a>
         </motion.div>
       </div>
 
       {/* Subtle bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent z-10 pointer-events-none" />
     </section>
   );
 }

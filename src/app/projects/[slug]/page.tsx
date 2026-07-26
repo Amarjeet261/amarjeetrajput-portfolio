@@ -52,7 +52,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img src={project.thumbnail} alt="Background" className="w-full h-full object-cover blur-sm" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -87,6 +87,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </Button>
                   </a>
                 )}
+                
+                <a href="/#contact" className="inline-block">
+                  <Button variant="ghost" className="rounded-full gap-2 px-6">
+                    Contact
+                  </Button>
+                </a>
               </div>
             </div>
             

@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { projectsData } from "@/data/projects";
 import { Globe, CheckCircle } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import * as SiIcons from "react-icons/si";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 // Helper to get icon component dynamically
 const getIcon = (iconName: string) => {
@@ -14,6 +16,9 @@ const getIcon = (iconName: string) => {
 };
 
 export function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projectsData : projectsData.slice(0, 4);
+
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -32,7 +37,7 @@ export function Projects() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectsData.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={project.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -117,6 +122,16 @@ export function Projects() {
               </Link>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => setShowAll((prev) => !prev)}
+          >
+            {showAll ? "Show Less" : "Show More"}
+          </Button>
         </div>
       </div>
     </section>
