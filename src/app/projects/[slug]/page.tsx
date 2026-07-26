@@ -53,6 +53,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="absolute inset-0 z-0 opacity-20">
           <img src={project.thumbnail} alt="Background" className="w-full h-full object-cover blur-sm" />
           <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background" />
+          <div className="absolute inset-0 pointer-events-none bg-white/40 dark:bg-black/60" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">

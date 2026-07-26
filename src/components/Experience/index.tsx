@@ -1,10 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { experienceData } from "@/data/experience";
-import { ExternalLink, MapPin, Briefcase } from "lucide-react";
+import { ExternalLink, MapPin, Briefcase, X } from "lucide-react";
 
 export function Experience() {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const openImage = (img: string) => setActiveImage(img);
+  const closeImage = () => setActiveImage(null);
+
   return (
     <section id="experience" className="py-24 relative bg-blue-50/80 dark:bg-blue-950/20">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -37,7 +42,14 @@ export function Experience() {
                 <h3 className="text-lg font-bold font-outfit text-foreground">
                   {exp.company}
                 </h3>
-                {exp.verifyUrl && (
+                {exp.certificateImage ? (
+                  <button
+                    onClick={() => openImage(exp.certificateImage as string)}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors uppercase tracking-wide"
+                  >
+                    Verify
+                  </button>
+                ) : exp.verifyUrl ? (
                   <a
                     href={exp.verifyUrl}
                     target="_blank"
@@ -46,7 +58,7 @@ export function Experience() {
                   >
                     Verify <ExternalLink size={14} />
                   </a>
-                )}
+                ) : null}
               </div>
 
               {/* Role Row */}
@@ -91,9 +103,9 @@ export function Experience() {
 
                 {/* Tech tags */}
                 <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border/30">
-                  {exp.technologies.map((tech) => (
+                  {exp.technologies.map((tech, idx) => (
                     <span
-                      key={tech}
+                      key={`${tech}-${idx}`}
                       className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground"
                     >
                       {tech}
@@ -104,6 +116,28 @@ export function Experience() {
             </motion.div>
           ))}
         </div>
+        {activeImage && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6"
+            onClick={closeImage}
+          >
+            <div className="relative max-w-4xl w-full">
+              <button
+                onClick={closeImage}
+                className="absolute top-2 right-2 p-2 rounded-full bg-background/80 hover:bg-background text-foreground z-50"
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+              <img
+                src={activeImage}
+                alt="Certificate"
+                className="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-2xl mx-auto"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

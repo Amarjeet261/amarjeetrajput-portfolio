@@ -6,12 +6,9 @@ export const skillsData = [
     skills: [
       { name: "JavaScript", icon: "SiJavascript" },
       { name: "TypeScript", icon: "SiTypescript" },
-      { name: "Python", icon: "SiPython" },
       { name: "C++", icon: "SiCplusplus" },
-      { name: "SQL", icon: "SiPostgresql" },
       { name: "HTML5", icon: "SiHtml5" },
       { name: "CSS3", icon: "SiCss3" },
-      { name: "PHP", icon: "SiPhp" }
     ]
   },
   {
@@ -36,6 +33,7 @@ export const skillsData = [
     skills: [
       { name: "Node.js", icon: "SiNodedotjs" },
       { name: "Express.js", icon: "SiExpress" },
+      { name: "Nest.js", icon: "SiNest" },
       { name: "GraphQL", icon: "SiGraphql" },
       { name: "REST APIs", icon: "SiFastapi" },
       { name: "WebSockets", icon: "SiSocketdotio" },
@@ -49,7 +47,6 @@ export const skillsData = [
     titleColor: "#eab308",
     skills: [
       { name: "MongoDB", icon: "SiMongodb" },
-      { name: "MySQL", icon: "SiMysql" },
       { name: "PostgreSQL", icon: "SiPostgresql" },
       { name: "Prisma ORM", icon: "SiPrisma" },
       { name: "Redis", icon: "SiRedis" }

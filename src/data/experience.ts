@@ -1,47 +1,19 @@
 export const experienceData = [
   {
     id: "1",
-    company: "TechNova Solutions",
-    role: "Senior Full Stack Developer",
-    duration: "Jan 2024 - Present",
-    durationShort: "1 yr 6 mos",
-    location: "San Francisco, USA",
-    verifyUrl: "https://linkedin.com",
+    company: "Skillsyard",
+    role: "Full Stack Web Developer Intern",
+    duration: " 01 April 2025 - 28 Feb 2026",
+    durationShort: "1 Year",
+    location: "Onsite, India",
+    verifyUrl: "https://skillsyard.com",
+    certificateImage: "/certificates/skillsyard-internship.png",
     description: [
-      "Architected and developed a scalable microservices backend using Node.js, NestJS, and PostgreSQL.",
-      "Improved application performance by 40% through Redis caching and optimized database indexing.",
-      "Led a team of 4 junior developers and established CI/CD pipelines using GitHub Actions."
+      "Built and maintained responsive UI components using Next.js, React, and Tailwind CSS.",
+      "Implemented backend APIs and integration endpoints with Node.js and Express.",
+      "Collaborated with designers to translate Figma designs into production-ready pages and optimized performance.",
+      "Deployed and monitored applications on Vercel, and assisted in QA and bug fixes."
     ],
-    technologies: ["React", "Next.js", "TypeScript", "NestJS", "PostgreSQL", "Redis", "Docker"]
-  },
-  {
-    id: "2",
-    company: "WebFlow Agency",
-    role: "Frontend Developer",
-    duration: "Mar 2022 - Dec 2023",
-    durationShort: "1 yr 10 mos",
-    location: "Remote, India",
-    verifyUrl: "https://linkedin.com",
-    description: [
-      "Built highly interactive user interfaces using React and Tailwind CSS for 10+ enterprise clients.",
-      "Implemented complex state management using Redux Toolkit and React Query.",
-      "Collaborated with designers to ensure pixel-perfect implementation of Figma designs."
-    ],
-    technologies: ["React", "Redux", "Tailwind CSS", "Framer Motion", "Figma"]
-  },
-  {
-    id: "3",
-    company: "StartUp Inc.",
-    role: "Software Engineering Intern",
-    duration: "Jun 2021 - Feb 2022",
-    durationShort: "9 mos",
-    location: "Delhi, India",
-    verifyUrl: "https://linkedin.com",
-    description: [
-      "Developed RESTful APIs using Express.js and MongoDB.",
-      "Integrated third-party APIs including Stripe and SendGrid for payment processing and email notifications.",
-      "Participated in daily stand-ups and agile development cycles."
-    ],
-    technologies: ["Node.js", "Express.js", "MongoDB", "Stripe API"]
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Vercel"]
   }
 ];
