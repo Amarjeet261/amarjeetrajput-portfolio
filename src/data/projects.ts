@@ -89,5 +89,18 @@ export const projectsData = [
     featured: true,
     githubUrl: "",
     liveUrl: "https://ajyouthmediia-client.vercel.app/"
+  },
+  {
+    slug: "safnex",
+    title: "safnex",
+    description: "A contemporary web presence crafted to support branding and digital reach.",
+    thumbnail: "/project/safnex.png",
+    category: "Media",
+    technologies: ["Next.js","React", "Tailwind CSS", "UI/UX"],
+    techIcons: ["SiReact", "SiTailwindcss", "SiCodeigniter"],
+    status: "Completed",
+    featured: true,
+    githubUrl: "",
+    liveUrl: "https://safnex-ten.vercel.app/"
   }
 ];
